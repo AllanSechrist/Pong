@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://ccebwvfixxjsp"]
 
+[ext_resource type="PackedScene" uid="uid://craukqojck0vq" path="res://scenes/paddles/player_paddle1.tscn" id="1_rgld7"]
+[ext_resource type="PackedScene" uid="uid://bgt2vuy2col86" path="res://scenes/paddles/player_two_paddle.tscn" id="2_a8pr3"]
+[ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://scenes/ball/ball.tscn" id="3_a8pr3"]
+
 [node name="Sandbox" type="Node" unique_id=1034295641]
+
+[node name="PlayerPaddle" parent="." unique_id=948987604 instance=ExtResource("1_rgld7")]
+position = Vector2(287, 229)
+player_1 = true
+
+[node name="player_two_paddle" parent="." unique_id=1138949033 instance=ExtResource("2_a8pr3")]
+position = Vector2(883, 228)
+
+[node name="Ball" parent="." unique_id=747109430 instance=ExtResource("3_a8pr3")]
+position = Vector2(318, 214)
