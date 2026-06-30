@@ -4,19 +4,30 @@ class_name Ball
 @export var speed: float = 400.0
 @export var max_bounce_angle: float = 60.0
 
+var _start_position: Vector2
+
 func _ready() -> void:
-	launch()
-	
-func launch() -> void:
-	var dir := 1.0 if randf() > 0.5 else -1.0
+	_start_position = global_position
+
+func launch(dir: float = 0.0) -> void:
+	if dir == 0.0:
+		print("launch!")
+		dir = 1.0 if randf() > 0.5 else -1.0
 	var angle := deg_to_rad(randf_range(-30, 30))
 	velocity = Vector2(dir, 0).rotated(angle) * speed
+	
+func reset_and_serve(dir: float = 0.0) -> void:
+	velocity = Vector2.ZERO
+	global_position = _start_position
+	await get_tree().create_timer(1.0).timeout
+	launch(dir)
 	
 func _physics_process(delta: float) -> void:
 	var collision := move_and_collide(velocity * delta)
 	if collision:
 		var collider := collision.get_collider()
-		if collider.is_in_group("paddles"):
+		print(collider.name)
+		if collider is Paddle:
 			_bounce_off_paddle(collider)
 		else:
 			velocity = velocity.bounce(collision.get_normal())
@@ -35,6 +46,9 @@ func _paddle_half_height(paddle: Node2D) -> float:
 	if shape is RectangleShape2D:
 		return shape.size.y / 2.0
 	return 50.0
+
+	
+
 	
 	
 	

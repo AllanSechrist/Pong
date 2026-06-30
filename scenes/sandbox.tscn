@@ -1,17 +1,61 @@
 [gd_scene format=3 uid="uid://ccebwvfixxjsp"]
 
-[ext_resource type="PackedScene" uid="uid://craukqojck0vq" path="res://scenes/paddles/player_paddle1.tscn" id="1_rgld7"]
+[ext_resource type="Script" uid="uid://bwq2jv0wdrbv6" path="res://global/scripts/main.gd" id="1_tpt06"]
 [ext_resource type="PackedScene" uid="uid://bgt2vuy2col86" path="res://scenes/paddles/player_two_paddle.tscn" id="2_a8pr3"]
+[ext_resource type="PackedScene" uid="uid://craukqojck0vq" path="res://scenes/paddles/player_one_paddle.tscn" id="2_tpt06"]
 [ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://scenes/ball/ball.tscn" id="3_a8pr3"]
+[ext_resource type="PackedScene" uid="uid://c0sn17ssi1hy1" path="res://scenes/UI/ui.tscn" id="4_j6lu3"]
+[ext_resource type="PackedScene" uid="uid://mncx6o0d7l20" path="res://scenes/wall.tscn" id="6_16ffl"]
+[ext_resource type="PackedScene" uid="uid://dhccamfjmxcps" path="res://scenes/goal.tscn" id="6_17a3a"]
 
-[node name="Sandbox" type="Node" unique_id=1034295641]
+[node name="Sandbox" type="Node2D" unique_id=1559829578]
+script = ExtResource("1_tpt06")
 
-[node name="PlayerPaddle" parent="." unique_id=948987604 instance=ExtResource("1_rgld7")]
-position = Vector2(287, 229)
+[node name="player_one_paddle" parent="." unique_id=948987604 instance=ExtResource("2_tpt06")]
+position = Vector2(210, 235)
 player_1 = true
 
 [node name="player_two_paddle" parent="." unique_id=1138949033 instance=ExtResource("2_a8pr3")]
-position = Vector2(883, 228)
+position = Vector2(919, 230)
 
 [node name="Ball" parent="." unique_id=747109430 instance=ExtResource("3_a8pr3")]
-position = Vector2(318, 214)
+position = Vector2(544, 236)
+
+[node name="UI" parent="." unique_id=1749399929 instance=ExtResource("4_j6lu3")]
+
+[node name="Goals" type="Node2D" parent="." unique_id=613694519]
+
+[node name="LeftGoal" parent="Goals" unique_id=634343419 instance=ExtResource("6_17a3a")]
+
+[node name="RightGoal" parent="Goals" unique_id=1028940049 instance=ExtResource("6_17a3a")]
+position = Vector2(1086, 3)
+
+[node name="Walls" type="Node2D" parent="." unique_id=623569770]
+
+[node name="Top" parent="Walls" unique_id=836150181 instance=ExtResource("6_16ffl")]
+position = Vector2(0, 5)
+
+[node name="ColorRect" parent="Walls/Top" index="0" unique_id=1152683975]
+offset_left = 0.0
+offset_right = 1152.0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="Walls/Top" index="1" unique_id=44624014]
+position = Vector2(575.5, 0)
+metadata/_edit_lock_ = true
+
+[node name="Bottom" parent="Walls" unique_id=1032583523 instance=ExtResource("6_16ffl")]
+position = Vector2(0, 644)
+
+[node name="ColorRect" parent="Walls/Bottom" index="0" unique_id=1152683975]
+offset_left = 0.0
+offset_right = 1152.0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="Walls/Bottom" index="1" unique_id=44624014]
+position = Vector2(575.5, 0)
+metadata/_edit_lock_ = true
+
+[editable path="UI"]
+[editable path="Walls/Top"]
+[editable path="Walls/Bottom"]

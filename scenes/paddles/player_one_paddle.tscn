@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmbj6"]
 size = Vector2(18, 122)
 
-[node name="PlayerPaddle" type="CharacterBody2D" unique_id=948987604]
+[node name="player_one_paddle" type="CharacterBody2D" unique_id=948987604]
 script = ExtResource("1_hskfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706082417]
