@@ -32,9 +32,10 @@ func _on_goal_scored(body: Node, scorer: int, serve_dir: float) -> void:
 	if player_1_score >= win_score or player_2_score >= win_score:
 		_end_game(scorer)
 	else:
+		score_sound.play()
 		ball.reset_and_serve(serve_dir)
 		
-	score_sound.play()
+	
 		
 func _update_labels() -> void:
 	player_1_score_label.text = str(player_1_score)
