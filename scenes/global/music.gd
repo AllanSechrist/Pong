@@ -1,5 +1,8 @@
 extends AudioStreamPlayer2D
 
+func _ready() -> void:
+	play_music()
+
 func play_music() -> void:
 	if playing:
 		return

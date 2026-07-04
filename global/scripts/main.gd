@@ -1,5 +1,6 @@
 extends Node2D
 
+@export_file("*.tscn") var game_over_scene: String
 @export var win_score: int = 11
 
 @onready var ball: Ball = $Ball
@@ -41,4 +42,5 @@ func _update_labels() -> void:
 	
 func _end_game(winner: int) -> void:
 	ball.velocity = Vector2.ZERO
-	print("Player %d wins!" % winner) # change to UI label later
+	GameOver.winner = winner
+	get_tree().change_scene_to_file(game_over_scene)

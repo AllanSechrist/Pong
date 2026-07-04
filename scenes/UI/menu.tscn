@@ -11,6 +11,8 @@ default_font_size = 32
 font = ExtResource("2_2tfbb")
 font_size = 128
 
+[sub_resource type="Theme" id="Theme_2un8v"]
+
 [node name="Menu" type="Control" unique_id=1670557415]
 layout_mode = 3
 anchors_preset = 15
@@ -19,6 +21,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u81ku")
+game_scene = "uid://ccebwvfixxjsp"
+menu_scene = "uid://bps4on7tqbha4"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1111973727]
 layout_mode = 1
@@ -46,6 +50,7 @@ label_settings = SubResource("LabelSettings_t0rl5")
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1072150266]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = SubResource("Theme_2un8v")
 theme_override_fonts/font = ExtResource("2_2tfbb")
 text = "Start Game"
 

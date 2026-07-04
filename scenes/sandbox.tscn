@@ -11,6 +11,8 @@
 
 [node name="Sandbox" type="Node2D" unique_id=1559829578]
 script = ExtResource("1_tpt06")
+game_over_scene = "uid://ctthu5qwaqerj"
+win_score = 1
 
 [node name="player_one_paddle" parent="." unique_id=948987604 instance=ExtResource("2_tpt06")]
 position = Vector2(100, 324)

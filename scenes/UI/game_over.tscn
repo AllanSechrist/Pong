@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ctthu5qwaqerj"]
+
+[ext_resource type="Script" uid="uid://rma7sw05pq2m" path="res://scenes/UI/game_over.gd" id="1_njkqv"]
+[ext_resource type="FontFile" uid="uid://bsrnya6yebora" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="2_vop4n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l48yu"]
+font = ExtResource("2_vop4n")
+font_size = 128
+
+[node name="Game Over" type="Control" unique_id=1246673781]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_njkqv")
+game_scene = "uid://ccebwvfixxjsp"
+menu_scene = "uid://bps4on7tqbha4"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1762449314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="WinnerLabel" type="Label" parent="VBoxContainer" unique_id=1113646972]
+layout_mode = 2
+text = "Player 99 Wins!"
+label_settings = SubResource("LabelSettings_l48yu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1694036378]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_vop4n")
+theme_override_font_sizes/font_size = 32
+text = "Rematch"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer" unique_id=2118700322]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_vop4n")
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=554869985]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_vop4n")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
