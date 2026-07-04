@@ -20,7 +20,7 @@ player_1 = true
 position = Vector2(924, 324)
 
 [node name="Ball" parent="." unique_id=747109430 instance=ExtResource("3_a8pr3")]
-position = Vector2(544, 236)
+position = Vector2(512, 384)
 
 [node name="UI" parent="." unique_id=1749399929 instance=ExtResource("4_j6lu3")]
 
