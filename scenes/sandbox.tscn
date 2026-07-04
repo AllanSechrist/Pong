@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c0sn17ssi1hy1" path="res://scenes/UI/ui.tscn" id="4_j6lu3"]
 [ext_resource type="PackedScene" uid="uid://mncx6o0d7l20" path="res://scenes/wall.tscn" id="6_16ffl"]
 [ext_resource type="PackedScene" uid="uid://dhccamfjmxcps" path="res://scenes/goal.tscn" id="6_17a3a"]
+[ext_resource type="AudioStream" uid="uid://xr7arxpdvdw6" path="res://assets/sounds/sounds/collect_apple.wav" id="8_4b02c"]
 
 [node name="Sandbox" type="Node2D" unique_id=1559829578]
 script = ExtResource("1_tpt06")
@@ -55,6 +56,10 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" parent="Walls/Bottom" index="1" unique_id=44624014]
 position = Vector2(575.5, 0)
 metadata/_edit_lock_ = true
+
+[node name="ScoreSound" type="AudioStreamPlayer2D" parent="." unique_id=2081919102]
+stream = ExtResource("8_4b02c")
+volume_db = 10.0
 
 [editable path="UI"]
 [editable path="Walls/Top"]

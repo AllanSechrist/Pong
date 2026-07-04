@@ -7,6 +7,7 @@ extends Node2D
 @onready var player_2_score_label: Label = $UI/Player2ScoreLabel
 @onready var left_goal: Area2D = $Goals/LeftGoal
 @onready var right_goal: Area2D = $Goals/RightGoal
+@onready var score_sound: AudioStreamPlayer2D = $ScoreSound
 
 var player_1_score: int = 0
 var player_2_score: int = 0
@@ -31,6 +32,8 @@ func _on_goal_scored(body: Node, scorer: int, serve_dir: float) -> void:
 		_end_game(scorer)
 	else:
 		ball.reset_and_serve(serve_dir)
+		
+	score_sound.play()
 		
 func _update_labels() -> void:
 	player_1_score_label.text = str(player_1_score)
