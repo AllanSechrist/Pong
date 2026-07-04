@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Ball
 
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 @export var speed: float = 400.0
 @export var max_bounce_angle: float = 60.0
 
@@ -28,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		var collider := collision.get_collider()
 		print(collider.name)
 		if collider is Paddle:
+			audio_stream_player_2d.play()
 			_bounce_off_paddle(collider)
 		else:
 			velocity = velocity.bounce(collision.get_normal())

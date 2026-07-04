@@ -4,6 +4,8 @@
 size = Vector2(1151, 8)
 
 [node name="Wall" type="StaticBody2D" unique_id=586760662]
+collision_layer = 4
+collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1152683975]
 anchors_preset = 8

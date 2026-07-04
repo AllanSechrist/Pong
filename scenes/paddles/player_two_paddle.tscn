@@ -7,6 +7,9 @@
 size = Vector2(18, 120)
 
 [node name="player_two_paddle" type="CharacterBody2D" unique_id=1138949033]
+collision_mask = 4
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_7yyrf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1578803034]
