@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://bps4on7tqbha4"]
 
 [ext_resource type="Script" uid="uid://dcjrmxcqbp1jo" path="res://scenes/UI/menu.gd" id="1_u81ku"]
+[ext_resource type="FontFile" uid="uid://bsrnya6yebora" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="2_2tfbb"]
+
+[sub_resource type="Theme" id="Theme_2tfbb"]
+default_font = ExtResource("2_2tfbb")
+default_font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_t0rl5"]
-font_size = 64
+font = ExtResource("2_2tfbb")
+font_size = 128
 
 [node name="Menu" type="Control" unique_id=1670557415]
 layout_mode = 3
@@ -21,12 +27,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -478.0
-offset_top = -242.0
-offset_right = 502.0
-offset_bottom = 254.0
+offset_left = -490.0
+offset_top = -248.0
+offset_right = 490.0
+offset_bottom = 248.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_2tfbb")
 theme_override_constants/separation = 50
 alignment = 1
 
@@ -39,12 +46,14 @@ label_settings = SubResource("LabelSettings_t0rl5")
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1072150266]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_2tfbb")
 text = "Start Game"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=848114263]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_2tfbb")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

@@ -13,11 +13,11 @@
 script = ExtResource("1_tpt06")
 
 [node name="player_one_paddle" parent="." unique_id=948987604 instance=ExtResource("2_tpt06")]
-position = Vector2(210, 235)
+position = Vector2(100, 324)
 player_1 = true
 
 [node name="player_two_paddle" parent="." unique_id=1138949033 instance=ExtResource("2_a8pr3")]
-position = Vector2(919, 230)
+position = Vector2(924, 324)
 
 [node name="Ball" parent="." unique_id=747109430 instance=ExtResource("3_a8pr3")]
 position = Vector2(544, 236)
@@ -29,7 +29,7 @@ position = Vector2(544, 236)
 [node name="LeftGoal" parent="Goals" unique_id=634343419 instance=ExtResource("6_17a3a")]
 
 [node name="RightGoal" parent="Goals" unique_id=1028940049 instance=ExtResource("6_17a3a")]
-position = Vector2(1086, 3)
+position = Vector2(958, 10)
 
 [node name="Walls" type="Node2D" parent="." unique_id=623569770]
 
@@ -46,7 +46,7 @@ position = Vector2(575.5, 0)
 metadata/_edit_lock_ = true
 
 [node name="Bottom" parent="Walls" unique_id=1032583523 instance=ExtResource("6_16ffl")]
-position = Vector2(0, 644)
+position = Vector2(0, 763)
 
 [node name="ColorRect" parent="Walls/Bottom" index="0" unique_id=1152683975]
 offset_left = 0.0

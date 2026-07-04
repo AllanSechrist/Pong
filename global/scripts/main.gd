@@ -3,8 +3,8 @@ extends Node2D
 @export var win_score: int = 11
 
 @onready var ball: Ball = $Ball
-@onready var player_1_score_label: Label = $UI/Player1ScoreLabel
-@onready var player_2_score_label: Label = $UI/Player2ScoreLabel
+@onready var player_1_score_label: Label = $UI/MarginContainer/HBoxContainer/Player1ScoreLabel
+@onready var player_2_score_label: Label = $UI/MarginContainer/HBoxContainer/Player2ScoreLabel
 @onready var left_goal: Area2D = $Goals/LeftGoal
 @onready var right_goal: Area2D = $Goals/RightGoal
 @onready var score_sound: AudioStreamPlayer2D = $ScoreSound

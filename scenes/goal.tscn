@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dhccamfjmxcps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6lu3"]
-size = Vector2(66, 660)
+size = Vector2(66, 771)
 
 [node name="Goal" type="Area2D" unique_id=634343419]
 collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569816405]
-visible = false
-position = Vector2(32, 327)
+position = Vector2(32, 382.5)
 shape = SubResource("RectangleShape2D_j6lu3")
+debug_color = Color(5.7756904e-07, 0.5926893, 0.74207556, 0.41960785)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2048479097]
 offset_right = 66.0
-offset_bottom = 654.0
+offset_bottom = 767.0
 color = Color(0.9292367, 0.040002212, 1.92523e-07, 0.21176471)
